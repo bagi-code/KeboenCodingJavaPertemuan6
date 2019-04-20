@@ -1,4 +1,4 @@
-package com.bagicode.myapplicationrv;
+package com.bagicode.myapplicationrv.rc_withoutlistener;
 
 public class MahasiswaModel {
 

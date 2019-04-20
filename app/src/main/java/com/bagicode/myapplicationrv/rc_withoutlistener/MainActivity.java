@@ -1,10 +1,11 @@
-package com.bagicode.myapplicationrv;
+package com.bagicode.myapplicationrv.rc_withoutlistener;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+
+import com.bagicode.myapplicationrv.R;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -15,7 +16,6 @@ public class MainActivity extends AppCompatActivity {
     private RecyclerView recyclerView;
     private MahasiswaAdapter mAdapter;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,9 +24,10 @@ public class MainActivity extends AppCompatActivity {
         recyclerView = (RecyclerView) findViewById(R.id.rc_mahasiswa);
 
         mAdapter = new MahasiswaAdapter(itemproductList);
+
         RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getApplicationContext());
+
         recyclerView.setLayoutManager(mLayoutManager);
-        recyclerView.setItemAnimator(new DefaultItemAnimator());
         recyclerView.setAdapter(mAdapter);
 
         loadDataDummy();
